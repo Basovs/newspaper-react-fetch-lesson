@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Layout from "./components/Layout";
+import { Switch, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import NewspaperDetailPage from "./pages/NewspaperDetailPage";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Switch>
+        {/* Dynaqmic route */}
+        <Route
+          path="/newspaper-detail-page/"
+          // Var fylls prop?
+          render={props => {
+            return (
+              <Layout>
+                <NewspaperDetailPage {...props} />
+              </Layout>
+            );
+          }}
+        ></Route>
+
+        <Route path="/">
+          <Layout>
+            <HomePage />
+          </Layout>
+        </Route>
+      </Switch>
     </div>
   );
-}
+};
 
 export default App;
