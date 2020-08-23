@@ -2,14 +2,14 @@ import React from "react";
 import Layout from "./components/Layout";
 import { Switch, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
-import NewspaperDetailPage from "./pages/NewspaperDetailPage";
+// import NewspaperDetailPage from "./pages/NewspaperDetailPage";
 
 const App = () => {
   return (
     <div>
       <Switch>
         {/* Dynaqmic route */}
-        <Route
+        {/* <Route
           path="/newspaper-detail-page/"
           // Var fylls prop?
           render={props => {
@@ -19,7 +19,7 @@ const App = () => {
               </Layout>
             );
           }}
-        ></Route>
+        ></Route> */}
 
         <Route path="/">
           <Layout>

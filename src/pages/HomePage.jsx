@@ -4,7 +4,7 @@ import CardList from "../components/CardList";
 const HomePage = () => {
   return (
     <div>
-      <h1>HomePage</h1>
+      <h1>Homepage</h1>
       <CardList />
     </div>
   );
