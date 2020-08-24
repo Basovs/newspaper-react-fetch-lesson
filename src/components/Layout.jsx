@@ -1,8 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
+import Header from "./Header";
+
 const Layout = ({ children }) => {
-  return <LayoutShell>{children}</LayoutShell>;
+  return (
+    <LayoutShell>
+      <Header />
+      {children}
+    </LayoutShell>
+  );
 };
 
 export default Layout;
